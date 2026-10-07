@@ -19,8 +19,7 @@ async function sendOrder(){if(!cart.length)return alert('السلة فارغة.'
 العنوان: ${address}
 
 المنتجات:
-${validItems.map((x,i)=>`${i+1}) ${x.name} × ${x.qty} = ${money(x.price*x.qty)}`).join('
-')}
+${validItems.map((x,i)=>`${i+1}) ${x.name} × ${x.qty} = ${money(x.price*x.qty)}`).join('\n')}
 
 سعر المنتجات: ${money(subtotal)}
 التوصيل: ${money(delivery)}
